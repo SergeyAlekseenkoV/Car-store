@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+   initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cars Store</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+   crossorigin="anonymous">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+   crossorigin="anonymous">
+  <!-- main styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container-fluid top">
+      <div class="row text-center">
+        <div class="col-12 col-md-9"></div>
+        <div class="col-12 col-md-3 d-flex justify-content-center align-items-center pt-1">
+          <a href="#">
+            <p class="text-muted small pr-1 m-1 red-link">
+              <i class="fas fa-user pr-1"></i> My Account
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-muted small pr-1 m-1 red-link">
+              <i class="fas fa-cart-plus pr-1"></i> Cart
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-muted small pr-1 m-1 red-link">
+              <i class="fas fa-check-circle pr-1"></i> Checkout
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-muted small pr-1 m-1 pl-2 white-link border-left">
+              <i class="fas fa-search fa-2x"></i>
+            </p>
+          </a>
+        </div>
+      </div>
+      <hr>
+      <div class="row d-flex flex-row align-items-baseline flex-wrap pb-2">
+        <div class="col-12 col-md-3 mb-1 text-center text-md-left">
+          <a href="#">
+            <h1 class="text-capitalize font-weight-bold white-link">Car<span class="red-link">Store</span></h1>
+            <p class="lead text-uppercase font-weight-bold white-link">
+              Best Car Seller
+            </p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 mb-1 text-center text-md-right pr-md-5">
+          <p class="lead text-uppercase text-white pr-sm-2">
+            <i class="fas fa-mobile-alt pr-3 red-link"></i> +123 4556 7890
+          </p>
+          <p class="text-muted text-uppercase text-grey pr-sm-2">
+            MON-FRI: 8.30AM-7.30PM;SAT-SUN: 9.30-4.30PM
+          </p>
+        </div>
+        <div class="col-12 col-md-3 mb-1 d-flex justify-content-center align-items-center pl-lg-1 pr-md-5">
+          <div class="text-center px-2 border-left pt-3">
+            <p><i class="fas fa-star pb-1 red-link"></i></p>
+            <a href="#">
+              <p class="text-muted text-uppercase white-link">Wishlist</p>
+            </a>
+          </div>
+          <div class="text-center px-2 border-left pt-3">
+            <p><i class="fas fa-car-alt pb-1 red-link"></i></p>
+            <a href="#">
+              <p class="text-muted text-uppercase white-link">Compare</p>
+            </a>
+          </div>
+          <div class="text-center px-2 border-left border-right pt-3">
+            <p><i class="fas fa-shopping-cart pb-1 red-link"></i></p>
+            <a href="#">
+              <p class="text-muted text-uppercase white-link nowrap">My cart</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid black">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link px-xl-3 py-sm-2 px-1" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-4 py-sm-2 px-1" href="#">Servises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-4 py-sm-2 px-1" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-4 py-sm-2 px-1" href="#">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-4 py-sm-2 px-1" href="#footer">locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-4 py-sm-2 px-1" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header -->
+  <!-- section banner -->
+  <section id="banner" class="container-fluid">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center text-center pt-5">
+      <h2 class="heading-3 text-capitalize text-light p-5 text-hidden">
+        If you need the best accessories - you are on the right way!
+      </h2>
+    </div>
+  </section>
+  <!-- end banner -->
+  <!-- section goods -->
+  <section id="goods" class="container-fluid">
+    <div class="row">
+      <!-- one -->
+      <div class="col-md-6 d-flex flex-row justify-content-between align-items-center bg-dark-grey pr-0">
+        <div class="text-good pl-md-3">
+          <h3 class="heading-4 text-uppercase text-light">
+            Headlights
+          </h3>
+          <p class="text-muted text-capitalize">
+            Headlights Projector,LED,Factory
+          </p>
+        </div>
+        <img src="img/headlights.png" alt="headlights" class="img-fluid">
+      </div>
+      <!-- two -->
+      <div class="col-md-6 d-flex flex-row justify-content-between align-items-center bg-light-grey">
+        <div class="text-good pl-md-3">
+          <h3 class="heading-4 text-uppercase text-light">
+            Brake Gear
+          </h3>
+          <p class="text-muted text-capitalize text-dark">
+            Brake Gear,Best Factory
+          </p>
+        </div>
+        <img src="img/brake-gear.png" alt="brake-gear" class="img-fluid">
+      </div>
+    </div>
+    <div class="row d-flex flex-row-reverse">
+      <!-- four -->
+      <div class="col-md-6 d-flex flex-row justify-content-between align-items-center bg-dark-grey">
+        <div class="text-good pl-md-3">
+          <h3 class="heading-4 text-uppercase text-light">
+            Seats
+          </h3>
+          <p class="text-muted text-capitalize">
+            Seats,Best Factory
+          </p>
+        </div>
+        <img src="img/cars-chairs.png" alt="cars chairs" class="img-fluid">
+      </div>
+      <!-- three -->
+      <div class="col-md-6 d-flex flex-row justify-content-between align-items-center bg-light-grey">
+        <div class="text-good pl-md-3">
+          <h3 class="heading-4 text-uppercase text-light">
+            Rims
+          </h3>
+          <p class="text-muted text-capitalize text-dark">
+            Rims,Ti-Mg,Factory
+          </p>
+        </div>
+        <img src="img/wheels.png" alt="wheels" class="img-fluid">
+      </div>
+    </div>
+  </section>
+  <!-- end goods -->
+  <!-- section featured -->
+  <section id="featured" class="container-fluid text-center p-5">
+    <div class="row py-2">
+      <div class="col">
+        <h4 class="text-uppercase featured-text text-light">
+          Featured Products
+        </h4>
+        <div class="text-underline my-2 mx-auto"></div>
+      </div>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+      <!-- cards -->
+      <!-- one -->
+      <div class="card p-3 my-2">
+        <img src="img/accessory.png" alt="headlighs" class="img-top special-size">
+        <div class="card-body">
+          <div class="card-text">
+            <h5 class="red-link">Accessory</h5>
+            <p class="lead text-light">$ 310.00</p>
+          </div>
+          <div id="progress" class="progress position-relative w-50 mx-auto d-flex flex-row flex-nowrap justify-content-center align-items-center">
+            <div id="outer" class="position-absolute">
+              <div id="overlay" class="overlay position-absolute"></div>
+              <div id="inner" class="inner position-absolute d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- two -->
+      <div class="card p-3 my-2">
+        <img src="img/headlights-dark.png" alt="headlighs" class="img-top special-size">
+        <div class="card-body">
+          <div class="card-text">
+            <h5 class="red-link">Headligts</h5>
+            <p class="lead text-light">$ 300.00</p>
+          </div>
+          <div id="progress" class="progress position-relative w-50 mx-auto d-flex flex-row flex-nowrap justify-content-center align-items-center">
+            <div id="outer" class="position-absolute">
+              <div id="overlay" class="overlay position-absolute"></div>
+              <div id="inner" class="inner position-absolute d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- three -->
+      <div class="card p-3 my-2">
+        <img src="img/cars-chairs-green.png" alt="headlighs" class="img-top special-size">
+        <div class="card-body">
+          <div class="card-text">
+            <h5 class="red-link">Seats</h5>
+            <p class="lead text-light">$ 390.00</p>
+          </div>
+          <div id="progress" class="progress position-relative w-50 mx-auto d-flex flex-row flex-nowrap justify-content-center align-items-center">
+            <div id="outer" class="position-absolute">
+              <div id="overlay" class="overlay position-absolute"></div>
+              <div id="inner" class="inner position-absolute d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- four -->
+      <div class="card p-3 my-2">
+        <img src="img/loud-speaker.png" alt="headlighs" class="img-top special-size">
+        <div class="card-body">
+          <div class="card-text">
+            <h5 class="red-link">LoudSpeaker</h5>
+            <p class="lead text-light">$ 300.00</p>
+          </div>
+          <div id="progress" class="progress position-relative w-50 mx-auto d-flex flex-row flex-nowrap justify-content-center align-items-center">
+            <div id="outer" class="position-absolute">
+              <div id="overlay" class="overlay position-absolute"></div>
+              <div id="inner" class="inner position-absolute d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- five -->
+      <div class="card p-3 my-2">
+        <img src="img/rim.png" alt="headlighs" class="img-top special-size">
+        <div class="card-body">
+          <div class="card-text">
+            <h5 class="red-link">Rims</h5>
+            <p class="lead text-light">$ 305.00</p>
+          </div>
+          <div id="progress" class="progress position-relative w-50 mx-auto d-flex flex-row flex-nowrap justify-content-center align-items-center">
+            <div id="outer" class="position-absolute">
+              <div id="overlay" class="overlay position-absolute"></div>
+              <div id="inner" class="inner position-absolute d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+                <img src="img/star-progress.png" alt="star" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end featured -->
+  <!-- section offerings -->
+  <section id="offerings" class="container-fluid">
+    <div class="row offer d-md-flex justify-content-center align-items-center mx-auto">
+      <div class="col col-lg-6 p-5 text-center">
+        <p class="display-4 text-uppercase font-weight-bold text-light mb-0 offer-text">25% off</p>
+        <p class="text-light order-text">
+          on order over $ 999
+        </p>
+        <p class="text-muted small">
+        	This offer is valid in all our items
+        </p>
+        <a href="#" class="btn btn-secondary mt-2 text-uppercase px-5">Buy now</a>
+      </div>
+      <div class="col col-lg-6 p-5 text-center">
+        <p class="display-4 text-uppercase font-weight-bold text-light mb-0 offer-text">25% off</p>
+        <p class="text-light order-text">
+          on order over $ 999
+        </p>
+        <p class="text-muted small">
+          This offer is valid in all our items
+        </p>
+        <a href="#" class="btn btn-secondary mt-2 text-uppercase px-5">Buy now</a>
+      </div>
+    </div>
+  </section>
+  <!-- end offerings -->
+  <section id="about" class="container-fluid p-5">
+    <div class="row p-1">
+      <!-- links -->
+      <div class="col col-md-4 col-lg-3 pt-1">
+        <h6 class="text-light text-uppercase">Quick Links</h6>
+        <div class="text-underline mb-3 w-25"></div>
+        <a href="#" class="red-link d-block py-2">About us</a>
+        <a href="#" class="red-link d-block py-2">Customer Service</a>
+        <a href="#" class="red-link d-block py-2">Privacy policy</a>
+        <a href="#" class="red-link d-block py-2">Site map</a>
+        <a href="#" class="red-link d-block py-2">Search Terms</a>
+        <a href="#" class="red-link d-block py-2">Advanced Search</a>
+        <a href="#" class="red-link d-block py-2">Oreders and Returns</a>
+        <a href="#" class="red-link d-block py-2">Contact us</a>
+      </div>
+      <!-- links -->
+      <div class="col col-md-4 col-lg-3 pt-1">
+        <h6 class="text-light text-uppercase">Quick Links</h6>
+        <div class="text-underline mb-3 w-25"></div>
+        <a href="#" class="red-link d-block py-2">About us</a>
+        <a href="#" class="red-link d-block py-2">Customer Service</a>
+        <a href="#" class="red-link d-block py-2">Privacy policy</a>
+        <a href="#" class="red-link d-block py-2">Site map</a>
+        <a href="#" class="red-link d-block py-2">Search Terms</a>
+        <a href="#" class="red-link d-block py-2">Advanced Search</a>
+        <a href="#" class="red-link d-block py-2">Oreders and Returns</a>
+        <a href="#" class="red-link d-block py-2">Contact us</a>
+      </div>
+      <!-- links -->
+      <div class="col col-md-4 col-lg-3 pt-1">
+        <h6 class="text-light text-uppercase">Quick Links</h6>
+        <div class="text-underline mb-3 w-25"></div>
+        <a href="#" class="red-link d-block py-2">About us</a>
+        <a href="#" class="red-link d-block py-2">Customer Service</a>
+        <a href="#" class="red-link d-block py-2">Privacy policy</a>
+        <a href="#" class="red-link d-block py-2">Site map</a>
+        <a href="#" class="red-link d-block py-2">Search Terms</a>
+        <a href="#" class="red-link d-block py-2">Advanced Search</a>
+        <a href="#" class="red-link d-block py-2">Oreders and Returns</a>
+        <a href="#" class="red-link d-block py-2">Contact us</a>
+      </div>
+      <!-- submit -->
+      <div class="col-12 col-lg-3 pt-1">
+        <h6 class="text-light text-uppercase">Newsletter</h6>
+        <div class="text-underline mb-3 w-25"></div>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Tenetur quia, minima velit quaerat eius.
+        </p>
+        <form>
+          <div class="form-group">
+            <label for="Email">Email address</label>
+            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <button type="submit" class="btn btn-secondary px-4 text-uppercase">Submit</button>
+        </form>
+        <div class="social mt-5">
+          <a href="#" class="text-light mr-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light mr-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light mr-3"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-light mr-3"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-1">
+  </section>
+  <footer id="contacts" class="container-fluid px-5">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <article class="text-center text-lg-left">
+          <p class="lead text-uppercase text-light">Information</p>
+          <div class="text-underline mb-3"></div>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Obcaecati excepturi molestiae, natus cumque dolores, quidem, 
+            tenetur exercitationem ex libero consequatur dolorem accusantium 
+            id perferendis modi iste possimus itaque architecto. Adipisci.
+          </p>
+        </article>
+      </div>
+      <div class="col-12 col-lg-4">
+        <article class="pl-lg-5 text-center text-lg-left">
+          <p class="lead text-uppercase text-light">Information</p>
+          <div class="text-underline mb-3"></div>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Obcaecati excepturi molestiae, natus cumque dolores, quidem, 
+            tenetur exercitationem ex libero consequatur dolorem accusantium 
+            id perferendis modi iste possimus itaque architecto. Adipisci.
+          </p>
+        </article>
+      </div>
+      <div class="col-12 col-lg-4">
+        <article class="pl-lg-5 text-center text-lg-left">
+          <p class="lead text-uppercase text-light">Contact</p>
+          <div class="text-underline mb-3"></div>
+          <p class="text-muted">
+            <i class="fas fa-map-marker-alt pr-4 red-link"></i> 123,Main Road,Your Sity,NY 1234.
+          </p>
+          <p class="text-muted">
+            <i class="fas fa-phone pr-4 red-link"></i> 123 456 7890
+          </p>
+          <p class="text-muted">
+            <i class="far fa-clock pr-4 red-link"></i> 7 Days a week fromm 10.00AM to 6.00PM.
+          </p>
+          <p class="text-muted">
+            <i class="fas fa-envelope pr-4 red-link"></i>  info@psd.freebies.com
+          </p>
+        </article>
+      </div>
+    </div>
+    <hr class="mt-5 mb-1">
+    <div class="bottom d-flex justify-content-between align-items-center py-3">
+      <p class="text-muted">
+        <span class="font-weight-bold text-light">CarStore</span> &copy; 2017. All rights reserved.
+      </p>
+      <div class="bottom-links d-flex align-items-center flex-wrap">
+        <a href="#" class="pl-3 text-light"><i class="fab fa-cc-paypal fa-2x"></i></a>
+        <a href="#" class="pl-3 text-light"><i class="fab fa-cc-visa fa-2x"></i></a>
+        <a href="#" class="pl-3 text-light"><i class="fas fa-closed-captioning fa-2x"></i></a>
+        <a href="#" class="pl-3 text-light"><i class="fab fa-cc-mastercard fa-2x"></i></a>
+        <a href="#" class="pl-3 text-light"><i class="fab fa-cc-amex fa-2x"></i></a>
+        <a href="#" class="pl-3 text-light"><i class="fab fa-cc-diners-club fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

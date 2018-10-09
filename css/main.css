@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
+/*color scheme:*/
+:root {
+  --black: #030303;
+  --transparentBlack: rgba(3,3,3,.9);
+  --darkGrey: #1c1c1c;
+  --transparentDarkGrey: rgba(28,28,28,.8);
+  --darkenGrey: #282828;
+  --grey: #212121;
+  --transparentGrey: rgba(33,33,33,.9);
+  --lightGrey: #595959;
+  --white: #fff;
+  --transparentWhite: rgba(255,255,255,.9);
+  --red: #ff3448;
+  --transparentRed: rgba(255,52,72,.5);
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+h1{
+  margin-bottom: 0!important;
+}
+
+p {
+  margin-bottom: .5em!important;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: var(--lightGrey);
+  height: 1px;
+}
+/*header*/
+#header .top {
+  background: var(--transparentDarkGrey);
+}
+
+.red-link {
+  color: var(--red)!important;
+  transition: color 1.2s linear;
+}
+
+.red-link:hover {
+  color: var(--white)!important;
+}
+
+#header .white-link {
+  color: var(--white)!important;
+  transition: color 1.2s linear;
+}
+
+#header .white-link:hover {
+  color: var(--red)!important;
+}
+
+#header .white-text {
+  color: var(--white);
+}
+
+.text-grey {
+  color: var(--lightGrey);
+}
+
+.border-left {
+  border-left: 2px solid var(--lightGrey)!important;
+}
+
+.border-right{
+  border-right: 2px solid var(--lightGrey)!important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+/*nav*/
+#header .black {
+  background: var(--transparentBlack);
+}
+
+.navbar-toggler {
+  background: var(--red);
+  transition: all 1.2s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background: var(--darkGrey)!important;
+  outline: var(--red)!important;
+}
+
+.nav-link {
+  transition: all 2s ease-in-out;
+}
+
+.nav-link:hover {
+  background: var(--red);
+  color: var(--black)!important;
+}
+
+/*banner*/
+#banner {
+	width: 100vw;
+	height: 100vh;
+  background: url(../img/banner.png) center/cover no-repeat fixed;
+}
+
+.overlay {
+  height: 100vh;
+  background: transparent;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.text-hidden {
+  background: var(--transparentRed);
+  text-shadow: 2px 2px 5px var(--black);
+  border-radius: .5em;
+  margin-top: 45vh;
+  opacity: 0;
+  transition: all 2s linear;
+}
+
+.text-hidden:hover {
+  opacity: .9;
+  transform: translateY(-5vh);
+}
+/*goods*/
+.bg-dark-grey {
+  background: var(--darkGrey);
+}
+
+.bg-light-grey {
+  background: var(--lightGrey);
+}
+
+#goods .col-md-6 {
+  overflow: hidden;
+}
+
+#goods .text-dark {
+  color: var(--black)!important;
+}
+/*featured*/
+#featured {
+  background: var(--darkenGrey);
+}
+
+.text-underline {
+  background: var(--red);
+  width: 7em;
+  height: 3px;
+}
+
+#featured .card {
+  background: var(--lightGrey);
+}
+
+#featured .progress {
+  background: var(--lightGrey);
+}
+
+#outer {
+  width: 6.25em;
+  height: 1em!important;
+}
+
+#overlay {
+  width: 10%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--lightGrey);
+  z-index: 10;
+}
+
+#inner {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+}
+/*offerings*/
+#offerings {
+  background: var(--black) url(../img/cars.png) center/cover no-repeat fixed;
+  height: 100vh;
+}
+
+.offer {
+  width: 100%;
+  height: inherit;
+}
+
+.order-text {
+  font-size: 2em;
+}
+
+.btn {
+  background: var(--red);
+  border-radius: 1.2em!important;
+}
+/*contacts*/
+#about {
+  background: var(--black);
+}
+
+#about .form-group .form-control {
+  background: var(--lightGrey)!important;
+  border: none;
+  border-radius: 0;
+}
+
+#about .form-group .form-control::placeholder {
+  background: var(--lightGrey)!important;
+}
+/*contacts*/
+#contacts {
+  background: var(--black);
+}
+footer a.text-light {
+  transition: all 1.2s linear;
+}
+
+footer a.text-light:hover {
+  color: var(--red)!important;
+  transform: scale(2);
+}
+
+footer .text-underline {
+  width: 3.5em;
+}
+/*media quires*/
+@media screen and (max-width: 992px) {
+  footer .text-underline {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .offer-text {
+    font-size: 2em;
+  }
+}
